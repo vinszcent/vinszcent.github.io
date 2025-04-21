@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Reimagined</title>
+    <link rel="icon" type="image/png" href="../Images/Travel_Logo.png"  >
+    <script src="../JavaScript/script.js"></script>
+
+     <!--CSS CDN-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="../Css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!--Main Container-->
+        <div class="container">
+            <a class="navbar-brand travel" href="home.html" >
+                Travel Reimagined</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                 <!--Nav Links-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Explore.html">Explore Trails</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Hire.html">Hire a Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Plan.html">Plan Your Trip</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Community.html">Community & Reviews</a></li>
+
+                </ul>
+                        <!-- Login Button -->
+                     <div class="ms-4">
+                        <a class="btn btn-outline-primary" href="login.html">Login</a>
+                     </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container text-center py-5">
+        <h2>📅 Plan Your Trip</h2>
+        <p>From breathtaking landscapes to hidden gems, let’s create your perfect adventure.</p>
+        <p>🌟 Whether you’re a solo traveler, an adventure seeker, or a family explorer, we make planning easy!</p>
+        <a href="Hire.html" class="btn btn-primary mt-3">Find a Local Guide</a>
+    </section>
+
+
+    <section class="container py-4">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fas fa-route fa-3x text-primary"></i>
+                <h4 class="mt-3">Customized Itineraries</h4>
+                <p>Tailor your journey to fit your travel style, whether it’s relaxation, adventure, or cultural immersion.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-users fa-3x text-success"></i>
+                <h4 class="mt-3">Local Experts at Your Service</h4>
+                <p>Connect with experienced guides who know the best-kept secrets of your destination.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-compass fa-3x text-danger"></i>
+                <h4 class="mt-3">Effortless Planning</h4>
+                <p>Say goodbye to endless research. We streamline everything for a hassle-free adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center py-5 bg-light">
+        <h2>💬 Travel Stories & Tips</h2>
+        <p>Hear from fellow travelers, share your experiences, and get inspired for your next trip.</p>
+        <p>From must-see spots to hidden treasures, our community is here to guide you.</p>
+        <a href="Community.html" class="btn btn-warning mt-3">Explore Community Insights</a>
+    </section>
+
+
+    <section class="container py-5">
+        <h2 class="text-center mb-4">📝 Create Your Travel Plan</h2>
+        <form action="submit-plan.php" method="POST" class="bg-light p-4 rounded shadow">
+            <div class="mb-3">
+                <label for="destination" class="form-label">Destination</label>
+                <input type="text" class="form-control" id="destination" name="destination" placeholder="e.g. Mt. Madja-as" required>
+            </div>
+    
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="startDate" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="startDate" name="start_date" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="endDate" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="endDate" name="end_date" required>
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="activities" class="form-label">Planned Activities</label>
+                <textarea class="form-control" id="activities" name="activities" rows="3" placeholder="e.g. hiking, sightseeing, camping"></textarea>
+            </div>
+    
+            <div class="mb-3">
+                <label for="notes" class="form-label">Additional Notes</label>
+                <textarea class="form-control" id="notes" name="notes" rows="2" placeholder="Optional: packing list, travel tips, reminders..."></textarea>
+            </div>
+    
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" onclick="Plan()">Save Plan</button>
+
+            </div>
+        </form>
+    </section>
+    
+
+    <footer class="text-center bg-dark text-white py-3">
+        <p style="color: white;">&copy; 2025 Travel Reimagined. All Rights Reserved.</p>
+    </footer>
+  
+
+
+     <!--JavaScript CDN-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>
